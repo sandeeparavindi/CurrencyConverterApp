@@ -1,4 +1,3 @@
-// src/navigation/AppNavigator.tsx
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -7,19 +6,16 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-// Screens
 import ConversionScreen from '../screens/ConversionScreen';
 import HistoricalRatesScreen from '../screens/HistoricalRatesScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
-// Auth Navigator
 import AuthNavigator from './AuthNavigator';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-// Main tab navigator
 const MainNavigator: React.FC = () => {
     return (
         <Tab.Navigator
@@ -75,13 +71,10 @@ const MainNavigator: React.FC = () => {
     );
 };
 
-// Root navigator
 const AppNavigator: React.FC = () => {
-    // In a real app, you would check if the user is authenticated
-    // by checking if a token exists in secure storage
+
     const { isAuthenticated } = useSelector((state: RootState) => state.auth);
 
-    // For this demo, we'll allow skipping the auth flow
     const skipAuth = true;
 
     return (

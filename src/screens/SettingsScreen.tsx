@@ -17,10 +17,8 @@ const SettingsScreen: React.FC = () => {
 
     const handleLogout = async () => {
         try {
-            // Remove the token from secure storage
             await SecureStore.deleteItemAsync('userToken');
 
-            // Update Redux state
             dispatch(logout());
         } catch (error) {
             console.error('Error during logout:', error);

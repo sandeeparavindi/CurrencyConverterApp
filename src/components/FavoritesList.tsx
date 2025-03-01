@@ -1,4 +1,3 @@
-// src/components/FavoritesList.tsx
 import React from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
 import { Card, Text, IconButton } from 'react-native-paper';

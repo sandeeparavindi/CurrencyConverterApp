@@ -31,7 +31,6 @@ const CurrencyList: React.FC<CurrencyListProps> = ({
     const dispatch = useDispatch();
     const { favorites } = useSelector((state: RootState) => state.favorites);
 
-    // Filter currencies based on search query and favorites filter
     useEffect(() => {
         let result = POPULAR_CURRENCIES;
 
@@ -105,7 +104,6 @@ const CurrencyList: React.FC<CurrencyListProps> = ({
 
     return (
         <View style={styles.container}>
-            {/* Search Box */}
             <View style={styles.searchContainer}>
                 <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />
                 <TextInput
@@ -122,7 +120,6 @@ const CurrencyList: React.FC<CurrencyListProps> = ({
                 )}
             </View>
 
-            {/* Currency List */}
             <FlatList
                 data={filteredCurrencies}
                 renderItem={renderCurrencyItem}

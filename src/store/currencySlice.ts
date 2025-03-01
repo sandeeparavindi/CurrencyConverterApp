@@ -1,4 +1,3 @@
-// src/store/currencySlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { fetchLatestRates, fetchHistoricalRates, ExchangeRateResponse, HistoricalRatesResponse } from '../api/currencyApi';
 

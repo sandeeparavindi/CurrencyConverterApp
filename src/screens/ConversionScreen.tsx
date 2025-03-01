@@ -1,4 +1,3 @@
-// src/screens/ConversionScreen.tsx
 import React, { useEffect, useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { ActivityIndicator, Text } from 'react-native-paper';

@@ -1,4 +1,3 @@
-// src/components/RateChart.tsx
 import React from 'react';
 import { View, Dimensions, StyleSheet } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';

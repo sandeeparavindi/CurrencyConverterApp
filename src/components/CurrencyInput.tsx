@@ -1,4 +1,3 @@
-// src/components/CurrencyInput.tsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Menu, Button, Text } from 'react-native-paper';

@@ -1,4 +1,3 @@
-// src/store/favoritesSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface FavoritesPair {
@@ -24,7 +23,6 @@ const favoritesSlice = createSlice({
             const { from, to, name } = action.payload;
             const id = `${from}-${to}`;
 
-            // Check if already exists
             if (!state.pairs.some(pair => pair.id === id)) {
                 state.pairs.push({ id, from, to, name });
             }

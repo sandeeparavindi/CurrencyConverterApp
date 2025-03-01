@@ -1,4 +1,3 @@
-// src/screens/LoginScreen.tsx
 import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { TextInput, Button, Text } from 'react-native-paper';
@@ -18,7 +17,6 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     const [error, setError] = useState('');
 
     const handleLogin = async () => {
-        // Simple validation
         if (!email || !password) {
             setError('Please enter both email and password');
             return;
@@ -28,13 +26,8 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
         setError('');
 
         try {
-            // In a real app, you would make an API call to your backend server
-            // For this example, we'll simulate a successful login
-
-            // Simulate API call delay
             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            // Mock user data
             const userData = {
                 user: {
                     id: '123',
@@ -43,10 +36,8 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                 token: 'mock-jwt-token',
             };
 
-            // Store token securely
             await SecureStore.setItemAsync('userToken', userData.token);
 
-            // Update Redux state
             dispatch(login(userData));
         } catch (err) {
             setError('Login failed. Please try again.');

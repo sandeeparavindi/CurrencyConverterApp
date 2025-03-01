@@ -1,4 +1,3 @@
-// src/screens/RegisterScreen.tsx
 import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { TextInput, Button, Text } from 'react-native-paper';
@@ -15,7 +14,6 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
     const [error, setError] = useState('');
 
     const handleRegister = async () => {
-        // Simple validation
         if (!email || !password || !confirmPassword) {
             setError('Please fill in all fields');
             return;
@@ -30,13 +28,9 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
         setError('');
 
         try {
-            // In a real app, you would make an API call to your backend server
-            // For this example, we'll simulate a successful registration
 
-            // Simulate API call delay
             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            // Navigate to login screen after successful registration
             navigation.navigate('Login');
         } catch (err) {
             setError('Registration failed. Please try again.');
